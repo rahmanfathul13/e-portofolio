@@ -1,0 +1,318 @@
+/* =========================
+PROFILE HERO
+========================= */
+
+.profile-hero {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 50px;
+  padding: 140px 8% 60px;
+  align-items: start;
+}
+
+/* =========================
+IDENTITY CARD (DIPERBAIKI)
+========================= */
+
+.identity-card {
+  background: var(--white);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 40px 25px;
+  /* Sedikit dilebarkan agar lebih lega seperti referensi */
+  text-align: center;
+  position: sticky;
+  top: 110px;
+  border: 1px solid var(--border);
+  transition: 0.3s ease;
+}
+
+[data-theme="dark"] .identity-card {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.identity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo {
+  width: 160px;
+  /* Ukuran disesuaikan agar proporsional */
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--primary);
+  /* Menggunakan warna primary bawaan tema */
+
+  /* DIPERBAIKI: Agar foto presisi di tengah */
+  display: block;
+  margin: 0 auto 20px auto;
+
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+/* DIPERBAIKI: Mengubah h2 menjadi h3 sesuai dengan tag HTML Anda */
+.identity-card h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.role {
+  color: var(--text-soft);
+  font-size: 15px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+/* MINI INFO (DIPERBAIKI) */
+
+.mini-info {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.mini-info div {
+  display: flex;
+  align-items: center;
+  /* DIPERBAIKI: Ikon dan teks sejajar di tengah (vertikal) */
+  gap: 15px;
+  text-align: left;
+  padding: 12px 0;
+  /* Jarak antar baris diperlebar */
+  border-bottom: 1px solid var(--border);
+}
+
+.mini-info div:last-child {
+  border-bottom: none;
+}
+
+.mini-info i {
+  color: var(--primary);
+  font-size: 18px;
+  /* Ukuran ikon sedikit dibesarkan */
+  width: 25px;
+  text-align: center;
+}
+
+/* SOCIAL (DIPERBAIKI) */
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.social a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EFF6FF;
+  color: var(--primary);
+  border-radius: 50%;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+[data-theme="dark"] .social a {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.social a:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+  /* Tambahan efek shadow saat dihover */
+}
+
+/* =========================
+CONTENT
+========================= */
+
+.profile-content {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+[data-theme="dark"] .profile-content {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-content h1 {
+  font-size: 36px;
+  color: var(--text);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.profile-content h2 {
+  margin-top: 35px;
+  color: var(--text);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.profile-content h2 i {
+  color: var(--primary);
+}
+
+.profile-content p {
+  color: var(--text-soft);
+  line-height: 1.9;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* =========================
+QUOTE BOARD
+========================= */
+
+.quote-board {
+  margin-top: 40px;
+  padding: 30px;
+  background: #EFF6FF;
+  border-left: 5px solid var(--primary);
+  border-radius: 16px;
+  position: relative;
+}
+
+[data-theme="dark"] .quote-board {
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.quote-board i {
+  color: var(--primary);
+  font-size: 28px;
+  margin-bottom: 15px;
+  display: block;
+  opacity: 0.5;
+}
+
+.quote-board p {
+  font-size: 18px;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.quote-board span {
+  font-size: 14px;
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+/* =========================
+MAP
+========================= */
+
+.map-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 0 8% 80px;
+}
+
+.map-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: 0.3s ease;
+}
+
+[data-theme="dark"] .map-card {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.map-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.map-card h3 {
+  color: var(--text);
+  font-size: 18px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.map-card h3 i {
+  color: var(--primary);
+}
+
+.map-card iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 16px;
+  border: none;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:1024px) {
+  .profile-hero {
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+  }
+}
+
+@media(max-width:850px) {
+  .profile-hero {
+    grid-template-columns: 1fr;
+    padding: 120px 5% 50px;
+  }
+
+  .identity-card {
+    position: relative;
+    top: auto;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .profile-content {
+    padding: 30px 20px;
+  }
+
+  .map-section {
+    grid-template-columns: 1fr;
+    padding: 0 5% 60px;
+  }
+}
+
+@media(max-width:480px) {
+  .profile-content h1 {
+    font-size: 28px;
+  }
+
+  .profile-content h2 {
+    font-size: 20px;
+  }
+
+  .map-card iframe {
+    height: 250px;
+  }
+}

@@ -1,0 +1,80 @@
+/* =========================
+CUSTOM ANIMATIONS
+========================= */
+
+/* Hero Gradient Animation */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero {
+  background: linear-gradient(-45deg, var(--bg), #e0e7ff, var(--bg), #dbeafe);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+[data-theme="dark"] .hero {
+  background: linear-gradient(-45deg, var(--bg), #1e3a8a, var(--bg), #172554);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Float Animation for Profile Image */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.profile-box {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Button Pulse Animation */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+  }
+}
+
+.btn:hover {
+  animation: pulseGlow 1.5s infinite;
+}
+
+/* Interactive Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .card {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .card:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}

@@ -1,0 +1,136 @@
+/* =========================
+HEADER
+========================= */
+
+.header {
+  padding: 130px 8% 50px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: var(--primary, #2563EB);
+  font-weight: 600;
+}
+
+.breadcrumb p {
+  color: var(--text-soft, #64748B);
+}
+
+.header h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+  color: var(--text, #0F172A);
+}
+
+.header p {
+  max-width: 720px;
+  line-height: 1.8;
+  color: var(--text-soft, #64748B);
+}
+
+/* =========================
+STATISTICS
+========================= */
+
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 8% 50px;
+}
+
+.stats-card {
+  background: var(--white, #ffffff);
+  border-radius: 18px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border, transparent);
+  transition: 0.3s ease;
+}
+
+[data-theme="dark"] .stats-card {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stats-card h2 {
+  font-size: 34px;
+  color: var(--primary, #2563EB);
+  margin-bottom: 5px;
+}
+
+.stats-card p {
+  color: var(--text-soft, #64748B);
+  font-size: 14px;
+}
+
+/* =========================
+GRID MODUL AJAR (BOOK MOCKUP) - BARU
+========================= */
+
+.modul-grid-horizontal {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 25px;
+  padding: 0 8% 80px;
+}
+
+.modul-card-hz {
+  background: var(--white, #ffffff);
+  border: 1px solid var(--border, #e2e8f0);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .modul-card-hz {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.modul-card-hz:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
+  border-color: var(--primary, #2563EB);
+}
+
+/* EFEK 3D BUKU */
+.book-cover {
+  width: 85px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 3px 8px 8px 3px;
+  box-shadow:
+    -4px 0 5px rgba(0, 0, 0, 0.08),
+    5px 5px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.book-cover::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.15));
+  z-index: 2;
+}
+
+.book-cover img {
+  width: 100%;
+  height:
